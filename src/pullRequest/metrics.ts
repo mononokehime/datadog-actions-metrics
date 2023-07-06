@@ -13,6 +13,7 @@ const computeCommonTags = (e: PullRequestEvent): string[] => {
     `draft:${String(e.pull_request.draft)}`,
     `base_ref:${e.pull_request.base.ref}`,
     `head_ref:${e.pull_request.head.ref}`,
+    `repository_labels:${e.repository_labels}`,
   ]
   return tags
 }
